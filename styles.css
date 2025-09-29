@@ -33,37 +33,40 @@ body {
 }
 
 .card-recipe {
-  width: 375px;
+  max-width: 750px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   background-color: var(--White);
   border-radius: 10px;
-  padding: 25px;
+  padding: 3%;
+  gap: 20px;
+  margin: 10% auto;
 }
 
 .card-recipe img {
   border-radius: 7px;
 }
 
-h2,
-h3 {
+h1,
+h2 {
   font-family: "Young Serif", sans-serif;
   font-weight: 400;
   margin-bottom: 0;
 }
 
-h3 {
+h2 {
   color: var(--Brown-800);
 }
 
-h4 {
+h3 {
   color: var(--Rose-800);
   margin-bottom: 0;
 }
 
-li {
+li,
+table {
   padding: 4px;
-  font-size: 0.7rem;
   color: var(--Stone-600);
 }
 
@@ -76,8 +79,8 @@ ol li::marker {
 }
 
 p {
-  font-size: 0.7rem;
   color: var(--Stone-600);
+  margin-top: 0;
 }
 
 .preparation-time {
@@ -88,4 +91,27 @@ p {
 
 .preparation-time ul li::marker {
   color: var(--Rose-800);
+}
+
+table tr td {
+  border-bottom: solid 1px var(--Stone-150);
+  padding: 7px;
+}
+
+table tr td span {
+  color: var(--Brown-800);
+  font-weight: 600;
+}
+
+hr {
+  border: solid 1px var(--Stone-150);
+  width: 100%;
+}
+
+@media (max-width: 375px) {
+  .card-recipe {
+    width: 100%;
+    font-size: .9rem;
+    gap: 10px;
+  }
 }
